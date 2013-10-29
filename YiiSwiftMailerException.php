@@ -1,5 +1,5 @@
 <?php 
-namespace YiiSwiftMailer\YiiSwiftMailer;
+//namespace YiiSwiftMailer\YiiSwiftMailer;
 
 /**
 * class YiiSwiftException
@@ -7,7 +7,7 @@ namespace YiiSwiftMailer\YiiSwiftMailer;
 * @version 1.0
 */
 
-class YiiSwiftException extends \Exception
+class YiiSwiftException extends Exception
 {
     
 }

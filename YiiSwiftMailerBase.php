@@ -1,6 +1,6 @@
 <?php 
-namespace YiiSwiftMailer\YiiSwiftMailer;
-Splunregister();
+//namespace application\extensions\YiiSwiftMailer;
+
 
 /**	CrugeMailerBase
 
