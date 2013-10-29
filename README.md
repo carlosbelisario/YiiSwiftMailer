@@ -8,3 +8,52 @@ This library is based in the <a href="https://github.com/yiiframeworkenespanol/c
 The motive for the creation of this extensión is the problems, when include  the class when is used the versión of CrugeSwiftMailer and is used the extensión cruge (the user manager).
 
 
+<b>Install</b>
+
+clone this repository in the folder extensions in a application YiiFramework 
+
+
+git clone https://github.com/carlosbelisario/YiiSwiftMailer.git
+
+active the submodule swiftmailer
+
+git submodule init 
+git submodule update
+
+add in the config/main.php file of the application this lines
+
+'import'=>array(
+		'application.models.*',
+		'application.components.*',
+    'application.extensions.YiiSwiftMailer.*',
+),
+
+
+'components'=>array(
+		//others component config
+		
+		'mailer'=>array(
+            'class' => 'application.extensions.YiiSwiftMailer.YiiSwiftMailer',
+            'mailfrom' => 'carlos.belisario.gonzalez@gmail.com',
+            'transport' => 'gmail', // gmail para usar el stmp de gmail (recomendado), no especificarlo trabajara la librería con la función mail de php
+            /**
+            *
+            * obligatorios si el transporte es gmail
+            */
+            'user' => 'carlos.belisario.gonzalez@gmail.com',
+            'password' => 'pasword stmp user', // this case  is the password of gmail
+            'subjectprefix' => 'Prefijo que deseas agregar, es opcional - ',
+    ),
+),
+ <b> usage</b>
+ Yii::app()->mailer->sendEmail(
+    'body of the message',
+    array('carlos.belisario.gonzalez@gmail.com'), // to
+    array('contac@midominio.com'), //from optional
+    'Asunto del Correo Electrónico' //subject optional
+); 
+
+
+<b>Usage</b>
+
+Yii::app()->mailer->sendMail();
