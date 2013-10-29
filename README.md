@@ -22,17 +22,17 @@ git submodule update
 
 add in the config/main.php file of the application this lines
 
+<pre>
 'import'=>array(
 		'application.models.*',
 		'application.components.*',
     'application.extensions.YiiSwiftMailer.*',
 ),
 
-
 'components'=>array(
 		//others component config
 		
-		'mailer'=>array(
+	'mailer'=>array(
             'class' => 'application.extensions.YiiSwiftMailer.YiiSwiftMailer',
             'mailfrom' => 'carlos.belisario.gonzalez@gmail.com',
             'transport' => 'gmail', // gmail para usar el stmp de gmail (recomendado), no especificarlo trabajara la librería con la función mail de php
@@ -45,15 +45,16 @@ add in the config/main.php file of the application this lines
             'subjectprefix' => 'Prefijo que deseas agregar, es opcional - ',
     ),
 ),
+</pre>
  <b> usage</b>
+
+<pre>
  Yii::app()->mailer->sendEmail(
     'body of the message',
     array('carlos.belisario.gonzalez@gmail.com'), // to
     array('contac@midominio.com'), //from optional
     'Asunto del Correo Electrónico' //subject optional
 ); 
+</pre>
 
 
-<b>Usage</b>
-
-Yii::app()->mailer->sendMail();
