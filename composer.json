@@ -1,0 +1,8 @@
+{
+    "name" : "carlosbelisario/yii-swiftmailer",
+    "description" : "YiiSwiftMailer extension",
+    "license" : "GPL-2.0",
+    "require" : {
+        "carlosbelisario/YiiSwiftMailer" : "dev-master"
+    }
+}
