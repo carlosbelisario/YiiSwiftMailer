@@ -52,7 +52,7 @@ class YiiSwiftMailer extends YiiSwiftMailerBase implements YiiSwiftMailerInterfa
      * @return Array
      * @throws YiiSwiftMailerException if the mail format is wrong
      */
-	public function getConfig() 
+    public function getConfig() 
     {
         if (isset($this->user)) {
             if (!filter_var($this->user, FILTER_VALIDATE_EMAIL)) {
@@ -112,7 +112,7 @@ class YiiSwiftMailer extends YiiSwiftMailerBase implements YiiSwiftMailerInterfa
 
     public function t($text)
     {
-	    return Yii::t($text);
+        return Yii::t($text);
     }
     
    

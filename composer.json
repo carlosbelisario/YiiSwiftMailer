@@ -4,5 +4,6 @@
     "license" : "GPL-2.0",
     "require" : {
         "carlosbelisario/YiiSwiftMailer" : "master"
-    }
+    },
+    "minimum-stability" : "dev"
 }
