@@ -24,25 +24,25 @@ add in the config/main.php file of the application this lines
 
 <pre>
 'import'=>array(
-		'application.models.*',
-		'application.components.*',
-    'application.extensions.YiiSwiftMailer.*',
+    'application.models.*',
+    'application.components.*',
+    'application.extensions.YiiSwiftMailer.src.*',
 ),
 
 'components'=>array(
-		//others component config
-		
-	'mailer'=>array(
-            'class' => 'application.extensions.YiiSwiftMailer.YiiSwiftMailer',
-            'mailfrom' => 'carlos.belisario.gonzalez@gmail.com',
-            'transport' => 'gmail', // gmail para usar el stmp de gmail (recomendado), no especificarlo trabajara la librería con la función mail de php
-            /**
-            *
-            * obligatorios si el transporte es gmail
-            */
-            'user' => 'carlos.belisario.gonzalez@gmail.com',
-            'password' => 'pasword stmp user', // this case  is the password of gmail
-            'subjectprefix' => 'Prefijo que deseas agregar, es opcional - ',
+    //others component config
+    'mailer'=>array(
+        'class' => 'application.extensions.YiiSwiftMailer.YiiSwiftMailer',
+        'mailfrom' => 'tucorreo@dominio.com',
+        'transport' => 'gmail', // gmail para usar el stmp de gmail (recomendado), no especificarlo trabajara la librería con la función mail de php
+        /**
+         *
+         * obligatorios si el transporte es un smtp
+         */
+        'user' => 'carlos.belisario.gonzalez@gmail.com',
+        'password' => 'pasword stmp user', // this case  is the password of gmail
+        'port' => 25,
+        'subjectprefix' => 'Prefijo que deseas agregar, es opcional - ',
     ),
 ),
 </pre>
@@ -56,5 +56,18 @@ add in the config/main.php file of the application this lines
     'Asunto del Correo Electrónico' //subject optional
 ); 
 </pre>
+
+the sendMail method of YiiSwiftMailer class has the following structure
+public function sendEmail($body, array $to, array $from = null, $subject = '', $contentType = 'text/html', $attachment = null)
+
+the params are 
+$body: the body of the message
+$to: a array with the addressee
+$from: optional if not defined is taked from the config
+$subject: optional the subject of the message.
+$contentType: optional, default text/html
+$attachment: paht to the file
+
+
 
 
