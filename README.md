@@ -58,6 +58,7 @@ add in the config/main.php file of the application this lines
 </pre>
 
 the sendMail method of YiiSwiftMailer class has the following structure
+
 public function sendEmail($body, array $to, array $from = null, $subject = '', $contentType = 'text/html', $attachment = null)
 
 the params are 
