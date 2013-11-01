@@ -62,11 +62,17 @@ the sendMail method of YiiSwiftMailer class has the following structure
 public function sendEmail($body, array $to, array $from = null, $subject = '', $contentType = 'text/html', $attachment = null)
 
 the params are 
+
 $body: the body of the message
+
 $to: a array with the addressee
+
 $from: optional if not defined is taked from the config
+
 $subject: optional the subject of the message.
+
 $contentType: optional, default text/html
+
 $attachment: paht to the file
 
 
