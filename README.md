@@ -32,7 +32,7 @@ add in the config/main.php file of the application this lines
 'components'=>array(
     //others component config
     'mailer'=>array(
-        'class' => 'application.extensions.YiiSwiftMailer.YiiSwiftMailer',
+        'class' => 'application.extensions.YiiSwiftMailer.src.YiiSwiftMailer',
         'mailfrom' => 'tucorreo@dominio.com',
         'transport' => 'gmail', // gmail para usar el stmp de gmail (recomendado), no especificarlo trabajara la librería con la función mail de php
         /**
